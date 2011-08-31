@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--
+   Copyright 2011 Matthias Balke (mail@balke-technologies.de)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<config>
+    <sections>
+        <storeMaintenance translate="label" module="BalkeTechnologies_StoreMaintenance">
+            <label>Store Maintenance</label>
+            <tab>advanced</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>998</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Store Maintenance?</label>
+                            <comment>enable or disable Store Maintenance</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <allowFrontendForAdmins translate="label">
+                            <label>Frontend Access for Admins?</label>
+                            <comment>logged in admins bypass Store Maintenance?</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowFrontendForAdmins>
+                        <allowedIPs translate="label">
+                            <label>Allowed IPs</label>
+                            <comment>IPs that bypass Store Maintenance</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowedIPs>
+                        <maintenancePage translate="label">
+                            <label>Maintenance Page HTML Code</label>
+                            <comment><![CDATA[Instead of blank page, show this HTML code<br />(leave empty for blank page)]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maintenancePage>
+                        <logVerbosity translate="label">
+                            <label>Log Verbosity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>BalkeTechnologies_StoreMaintenance/adminhtml_system_config_source_logging</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logVerbosity>
+                        <logFile translate="label">
+                            <label>Logfile</label>
+                            <comment><![CDATA[log file to log access while maintenance mode<br />(default: maintenance.log)]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logFile>
+                        <version translate="label">
+                            <label>Module version</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>BalkeTechnologies_StoreMaintenance/adminhtml_form_renderer_config_version</frontend_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>
+                    </fields>
+                </settings>
+            </groups>
+        </storeMaintenance>
+    </sections>
+</config>

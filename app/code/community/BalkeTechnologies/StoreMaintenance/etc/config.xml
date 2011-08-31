@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!--
+   Copyright 2011 Matthias Balke (mail@balke-technologies.de)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<config>
+    <modules>
+        <BalkeTechnologies_StoreMaintenance>
+            <version>0.3.2</version>
+        </BalkeTechnologies_StoreMaintenance>
+    </modules>
+    
+    <global>
+        <helpers>
+            <BalkeTechnologies_StoreMaintenance>
+                <class>BalkeTechnologies_StoreMaintenance_Helper</class>
+            </BalkeTechnologies_StoreMaintenance>
+        </helpers>
+        <blocks>
+            <BalkeTechnologies_StoreMaintenance>
+                <class>BalkeTechnologies_StoreMaintenance_Block</class>
+            </BalkeTechnologies_StoreMaintenance>    
+        </blocks>
+        <models>
+            <BalkeTechnologies_StoreMaintenance>
+                <class>BalkeTechnologies_StoreMaintenance_Model</class>    
+            </BalkeTechnologies_StoreMaintenance>
+        </models>
+    </global>
+
+    <stores>
+        <default>
+            <web>
+                <routers>
+                    <standard>
+                        <area>frontend</area>
+                        <class>BalkeTechnologies_StoreMaintenance_Controller_Router_Standard</class>
+                    </standard>
+                </routers>
+            </web>
+        </default>
+    </stores>
+
+    <default>
+        <web>
+            <routers> 
+                <standard>
+                    <area>frontend</area>
+                    <class>BalkeTechnologies_StoreMaintenance_Controller_Router_Standard</class>
+                </standard>
+            </routers>
+        </web>
+        <storeMaintenance>
+            <settings>
+                <enabled>0</enabled>
+                <allowedIPs></allowedIPs>
+                <allowFrontendForAdmins>1</allowFrontendForAdmins>
+                <maintenancePage><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Maintenance</title>
+        <style type="text/css"><!--
+
+            *{
+                margin: 0px;
+                passing: 0px;
+            }
+
+            body{
+                background-color: #222222;
+                color: #DDDDDD;
+                font-family: sans-serif;
+                margin-top: 350px;
+            }
+
+            h1{
+                margin-bottom: 20px;
+                margin-left: 0px;
+            }
+
+            h2{
+                margin-left: 494px;
+                font-size: 1.6em;
+            }
+
+            .block{
+                padding: 25px;
+                background-color: #555555;
+            }
+
+            .centered{
+                margin-left: auto;
+                margin-right: auto;
+                width: 800px;
+            }
+
+            --></style>
+    </head>
+    <body>
+        <div class="block">
+            <div class="centered">
+                <h1>we are sorry but this store is down for maintenance</h1>
+                <h2>please try again later ...</h2>
+            </div>
+        </div>
+
+    </body>
+</html>]]></maintenancePage>
+                <logVerbosity>1</logVerbosity>
+                <logFile>maintenance.log</logFile>
+            </settings>
+        </storeMaintenance>
+    </default>
+ 
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <storeMaintenance>
+                                            <title>Store Maintenance</title>
+                                        </storeMaintenance>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+     
+</config>
