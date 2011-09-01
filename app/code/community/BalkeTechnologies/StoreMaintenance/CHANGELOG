@@ -1,0 +1,37 @@
+0.3.3:
+-------
+balke technologies tab
+add current ip
+
+0.3.2:
+-------
+
+some cosmetic changes
+ 
+
+0.3.1:
+-------
+
+ added default custom maintenance page
+
+
+0.3.0:
+-------
+
+logged in administrators can bypass Store Maintenance if activated
+custom maintenance page can be defined for each store
+added comments to backend configuration
+
+
+0.2.0:
+-------
+
+Define a list of IP addresses which are allowed to access the frontend.
+Other ip addresses are blocked.
+All access attempts are logged to special log file
+Log file can be defined in backend
+Log verbosity can be defined in backend
+Logging can be switched off
+ 
+
+More features coming soon ...

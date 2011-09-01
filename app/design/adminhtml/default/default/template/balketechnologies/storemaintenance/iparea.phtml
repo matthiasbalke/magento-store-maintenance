@@ -1,0 +1,18 @@
+<textarea id="<?php echo $this->getHtmlId() ?>" name="<?php echo $this->getName() ?>" <?php echo $this->serialize($this->getHtmlAttributes()) ?>><?php echo $this->getEscapedValue() ?></textarea><br />
+<button class="scalable" type="button" id="balketechnologies_storemaintenance_add_my_ip">
+    <span><?php echo $this->escapeHtml($this->getButtonLabel()); ?></span>
+</button>
+
+<script type="text/javascript">
+    $('balketechnologies_storemaintenance_add_my_ip').observe('click', function() {
+        ip = '<?php echo $_SERVER['REMOTE_ADDR'] ?>';
+        
+        allowedIps = $('<?php echo $this->getHtmlId(); ?>').innerHTML;
+        
+        delimiter = '';
+        if (allowedIps != ''){
+            delimiter = ', '
+        }
+        $('<?php echo $this->getHtmlId(); ?>').update( allowedIps + delimiter + ip);
+    });
+</script>

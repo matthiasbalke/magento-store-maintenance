@@ -15,12 +15,18 @@
    limitations under the License.
 -->
 <config>
+    <tabs>
+        <balketechnologies module="BalkeTechnologies_StoreMaintenance">
+            <label>Balke Technologies</label>
+            <sort_order>9999999</sort_order>
+        </balketechnologies>
+    </tabs>
     <sections>
         <storeMaintenance translate="label" module="BalkeTechnologies_StoreMaintenance">
             <label>Store Maintenance</label>
-            <tab>advanced</tab>
+            <tab>balketechnologies</tab>
             <frontend_type>text</frontend_type>
-            <sort_order>998</sort_order>
+            <sort_order>1</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
@@ -56,7 +62,9 @@
                         <allowedIPs translate="label">
                             <label>Allowed IPs</label>
                             <comment>IPs that bypass Store Maintenance</comment>
-                            <frontend_type>text</frontend_type>
+                            <frontend_type>textarea</frontend_type>
+                            <button_label>add current ip</button_label>
+                            <frontend_model>BalkeTechnologies_StoreMaintenance/adminhtml_system_config_iparea</frontend_model>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
