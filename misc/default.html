@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Maintenance</title>
+        <script type="text/javascript" src="prototype.js"></script>
+        <script type="text/javascript">
+            <!--
+            // year, month, day, hours, minutes, seconds, milliseconds
+            var end = new Date();
+            end.setDay(3);
+            end.setMonth(9);
+            end.setYear(2011);
+            end.setHours(23);
+            end.setMinutes(00);
+            end.setSeconds(00);
+            
+            function updateTimer() {
+                var now = new Date(end - now);
+
+                var remaining = new Date();
+                $('days').update(end.getDay() - now.getDay());
+                $('hours').update(remaining.getHours());
+                $('minutes').update(remaining.getMinutes());
+                $('seconds').update(remaining.getSeconds());
+            }
+            -->
+        </script>
+        <style type="text/css">
+
+            *{
+                margin: 0px;
+                passing: 0px;
+            }
+
+            body{
+                background-color: #222222;
+                color: #DDDDDD;
+                font-family: sans-serif;
+                margin-top: 350px;
+            }
+
+            h1{
+                margin-bottom: 20px;
+                margin-left: 0px;
+            }
+
+            h2{
+                margin-left: 494px;
+                font-size: 1.6em;
+            }
+
+            .outer-block{
+                padding-top: 25px;
+                padding-bottom: 60px;
+                /*background-color: #AAAAAA;*/
+            }
+
+            .inner-block{
+                padding: 25px;
+                background-color: #555555;
+            }
+
+            .centered{
+                margin-left: auto;
+                margin-right: auto;
+                width: 800px;
+            }
+
+            .timer {
+                border: 1px solid yellow;
+                font-size: 2em;
+                font-weight: bold;
+                margin-top: 150px;
+                text-align: center;
+                width: 1000px;
+            }
+
+            #days, #hours, #minutes, #seconds{
+                font-size: 3em;
+            }
+        </style>
+    </head>
+    <body onload='setInterval("updateTimer()",1000);'>
+        <div class="centered timer"><span id="days"></span> days <span id="hours"></span> hours <span id="minutes"></span> minutes <span id="seconds"></span> seconds</div>
+        <div class="outer-block">
+            <div class="inner-block">
+                <div class="centered">
+                    <h1>we are sorry but this store is down for maintenance</h1>
+                    <h2>please try again later ...</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
