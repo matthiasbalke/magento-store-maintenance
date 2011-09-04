@@ -7,22 +7,71 @@
         <script type="text/javascript">
             <!--
             // year, month, day, hours, minutes, seconds, milliseconds
-            var end = new Date();
-            end.setDay(3);
-            end.setMonth(9);
-            end.setYear(2011);
-            end.setHours(23);
-            end.setMinutes(00);
-            end.setSeconds(00);
+            var end = new Date(2011, 08, 04, 13, 50, 00);          
+            var daysElement    = null;
+            var hoursElement   = null;
+            var minutesElement = null;
+            var secondsElement = null;
             
-            function updateTimer() {
-                var now = new Date(end - now);
-
-                var remaining = new Date();
-                $('days').update(end.getDay() - now.getDay());
-                $('hours').update(remaining.getHours());
-                $('minutes').update(remaining.getMinutes());
-                $('seconds').update(remaining.getSeconds());
+            
+            timerId = setInterval("updateTimer(timerId)",1000);
+            
+            function getContainer(){
+                daysElement    = $('days');
+                hoursElement   = $('hours');
+                minutesElement = $('minutes');
+                secondsElement = $('seconds');
+            }
+            
+            
+            function updateTimer(timerId) {
+                
+                var now = new Date();
+                var difference = end - now;
+            
+                
+            
+                if (difference < 0){
+                    if (null != daysElement)
+                        daysElement.update("0");
+                    
+                    if (null != hoursElement)
+                        hoursElement.update("0");
+                    
+                    if (null != minutesElement)
+                        minutesElement.update("0");
+                    
+                    if (null != secondsElement)
+                        secondsElement.update("0");
+                    
+                    clearInterval(timerId);
+                    exit();
+                }
+                
+                days = Math.floor(difference / 86400000);
+                difference = difference % 86400000;
+                hours = Math.floor(difference / 3600000);
+                difference = difference % 3600000;
+                minutes = Math.floor(difference / 60000);
+                difference = difference % 60000;
+                seconds = Math.floor(difference / 1000);
+                difference = difference % 1000;
+                msecs = difference;
+               
+                if (null != daysElement)
+                    daysElement.update(days);
+                
+                
+                if (null != hoursElement)
+                    hoursElement.update(hours);
+                
+                
+                if (null != minutesElement)
+                    minutesElement.update(minutes);
+                
+                
+                if (null != secondsElement)
+                    secondsElement.update(seconds);
             }
             -->
         </script>
@@ -37,7 +86,7 @@
                 background-color: #222222;
                 color: #DDDDDD;
                 font-family: sans-serif;
-                margin-top: 350px;
+                margin-top: 80px;
             }
 
             h1{
@@ -50,14 +99,9 @@
                 font-size: 1.6em;
             }
 
-            .outer-block{
-                padding-top: 25px;
-                padding-bottom: 60px;
-                /*background-color: #AAAAAA;*/
-            }
-
             .inner-block{
                 padding: 25px;
+                margin-bottom: 80px;
                 background-color: #555555;
             }
 
@@ -68,10 +112,11 @@
             }
 
             .timer {
-                border: 1px solid yellow;
+                /*border: 1px solid yellow;*/
+
                 font-size: 2em;
                 font-weight: bold;
-                margin-top: 150px;
+
                 text-align: center;
                 width: 1000px;
             }
@@ -81,15 +126,15 @@
             }
         </style>
     </head>
-    <body onload='setInterval("updateTimer()",1000);'>
-        <div class="centered timer"><span id="days"></span> days <span id="hours"></span> hours <span id="minutes"></span> minutes <span id="seconds"></span> seconds</div>
+    <body onload="javascript:getContainer()">
         <div class="outer-block">
             <div class="inner-block">
                 <div class="centered">
                     <h1>we are sorry but this store is down for maintenance</h1>
-                    <h2>please try again later ...</h2>
+                    <h2>please try again in ...</h2>
                 </div>
             </div>
         </div>
+        <div class="centered timer" id="timerBlock"><span id="days">0</span> days <span id="hours">0</span> hours <span id="minutes">0</span> minutes <span id="seconds">0</span> seconds</div>
     </body>
 </html>
