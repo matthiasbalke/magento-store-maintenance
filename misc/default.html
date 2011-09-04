@@ -3,58 +3,15 @@
 <html>
     <head>
         <title>Maintenance</title>
-        <script type="text/javascript" src="prototype.js"></script>
-        <script type="text/javascript" src="timer.js"></script>
-        <style type="text/css">
-
-            *{
-                margin: 0px;
-                passing: 0px;
-            }
-
-            body{
-                background-color: #222222;
-                color: #DDDDDD;
-                font-family: sans-serif;
-                margin-top: 80px;
-            }
-
-            h1{
-                margin-bottom: 20px;
-                margin-left: 0px;
-            }
-
-            h2{
-                margin-left: 494px;
-                font-size: 1.6em;
-            }
-
-            .inner-block{
-                padding: 25px;
-                margin-bottom: 80px;
-                background-color: #555555;
-            }
-
-            .centered{
-                margin-left: auto;
-                margin-right: auto;
-                width: 800px;
-            }
-
-            .timer {
-                /*border: 1px solid yellow;*/
-
-                font-size: 2em;
-                font-weight: bold;
-
-                text-align: center;
-                width: 1000px;
-            }
-
-            #days, #hours, #minutes, #seconds{
-                font-size: 3em;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="{{skinBasePath}}css/styles.css" />
+        <script type="text/javascript" src="{{skinBasePath}}js/prototype.js"></script>
+        <script type="text/javascript">
+            <!--
+            // year, month, day, hours, minutes, seconds, milliseconds
+            var end = new Date(2012, 01, 01, 00, 00, 00);
+            -->
+        </script>
+        <script type="text/javascript" src="{{skinBasePath}}js/timer.js"></script>
     </head>
     <body onload="javascript:getContainer()">
         <div class="outer-block">
@@ -65,6 +22,6 @@
                 </div>
             </div>
         </div>
-        <div class="centered timer" id="timerBlock"><span id="days">0</span> days <span id="hours">0</span> hours <span id="minutes">0</span> minutes <span id="seconds">0</span> seconds</div>
+        <div class="centered timer" id="timerBlock"><span id="days">0</span> days <span id="hours">00</span> hours <span id="minutes">00</span> minutes <span id="seconds">00</span> seconds</div>
     </body>
 </html>

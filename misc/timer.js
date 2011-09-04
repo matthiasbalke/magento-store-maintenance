@@ -1,6 +1,4 @@
 
-// year, month, day, hours, minutes, seconds, milliseconds
-var end = new Date(2011, 08, 04, 13, 50, 00);          
 var daysElement    = null;
 var hoursElement   = null;
 var minutesElement = null;
@@ -19,8 +17,6 @@ function updateTimer(timerId) {
 
     var now = new Date();
     var difference = end - now;
-
-
 
     if (difference < 0){
         if (null != daysElement)
@@ -53,11 +49,19 @@ function updateTimer(timerId) {
         daysElement.update(days);
 
     if (null != hoursElement)
-        hoursElement.update(hours);
+        hoursElement.update(getDoubleDigits(hours));
 
     if (null != minutesElement)
-        minutesElement.update(minutes);
+        minutesElement.update(getDoubleDigits(minutes));
 
     if (null != secondsElement)
-        secondsElement.update(seconds);
+        secondsElement.update(getDoubleDigits(seconds));
+}
+
+function getDoubleDigits(x){
+    if (x < 10){
+        return "0" + x;
+    } else {
+        return x;
+    }
 }

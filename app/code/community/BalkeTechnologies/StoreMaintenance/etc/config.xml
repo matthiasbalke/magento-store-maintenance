@@ -71,55 +71,40 @@
 <html>
     <head>
         <title>Maintenance</title>
-        <style type="text/css"><!--
-
-            *{
-                margin: 0px;
-                passing: 0px;
-            }
-
-            body{
-                background-color: #222222;
-                color: #DDDDDD;
-                font-family: sans-serif;
-                margin-top: 350px;
-            }
-
-            h1{
-                margin-bottom: 20px;
-                margin-left: 0px;
-            }
-
-            h2{
-                margin-left: 494px;
-                font-size: 1.6em;
-            }
-
-            .block{
-                padding: 25px;
-                background-color: #555555;
-            }
-
-            .centered{
-                margin-left: auto;
-                margin-right: auto;
-                width: 800px;
-            }
-
-            --></style>
+        <link rel="stylesheet" type="text/css" href="{{skinBasePath}}css/styles.css" />
+        {{if="timerEnabled==1"}}<script type="text/javascript" src="{{skinBasePath}}js/prototype.js"></script>
+        <script type="text/javascript">
+            <!--
+            // year, month, day, hours, minutes, seconds, milliseconds
+            var end = new Date(2012, 01, 01, 00, 00, 00);
+            -->
+        </script>
+        <script type="text/javascript" src="{{skinBasePath}}js/timer.js"></script>{{/if}}
     </head>
-    <body>
-        <div class="block">
-            <div class="centered">
-                <h1>we are sorry but this store is down for maintenance</h1>
-                <h2>please try again later ...</h2>
+    <body onload="javascript:getContainer()">
+        <div class="outer-block">
+            <div class="inner-block">
+                <div class="centered">
+                    <h1>we are sorry but this store is down for maintenance</h1>
+                    <h2>please try again {{if="timerEnabled==1"}}in{{else}}later{{/if}} ...</h2>
+                </div>
             </div>
         </div>
-
+        {{if="timerEnabled==1"}}<div class="centered timer" id="timerBlock"><span id="days">0</span> days <span id="hours">00</span> hours <span id="minutes">00</span> minutes <span id="seconds">00</span> seconds</div>{{/if}}
     </body>
 </html>]]></maintenancePage>
                 <logVerbosity>1</logVerbosity>
                 <logFile>maintenance.log</logFile>
+                <templateSettings>
+                    <timerEnabled>0</timerEnabled>
+                    <endYear>2012</endYear>
+                    <endMonth>01</endMonth>
+                    <endDay>01</endDay>
+                    <endHours>00</endHours>
+                    <endMinutes>00</endMinutes>
+                    <endSeconds>00</endSeconds>
+                    <skinBasePath>frontend/base/default/balketechnologies/storemaintenance/</skinBasePath>
+                </templateSettings>
             </settings>
         </storeMaintenance>
     </default>

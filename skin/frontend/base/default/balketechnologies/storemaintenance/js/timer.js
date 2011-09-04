@@ -1,6 +1,4 @@
 
-// year, month, day, hours, minutes, seconds, milliseconds
-var end = new Date(2011, 08, 04, 13, 50, 00);          
 var daysElement    = null;
 var hoursElement   = null;
 var minutesElement = null;
