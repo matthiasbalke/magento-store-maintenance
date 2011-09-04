@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Maintenance</title>
+        <link rel="stylesheet" type="text/css" href="{{skinBasePath}}css/styles.css" />
+        <script type="text/javascript" src="{{skinBasePath}}js/prototype.js"></script>
+        <script type="text/javascript">
+            <!--
+            // year, month, day, hours, minutes, seconds, milliseconds
+            var end = new Date(2012, 01, 01, 00, 00, 00);
+            -->
+        </script>
+        <script type="text/javascript" src="{{skinBasePath}}js/timer.js"></script>
+    </head>
+    <body onload="javascript:getContainer()">
+        <div class="outer-block">
+            <div class="inner-block">
+                <div class="centered">
+                    <h1>we are sorry but this store is down for maintenance</h1>
+                    <h2>please try again in ...</h2>
+                </div>
+            </div>
+        </div>
+        <div class="centered timer" id="timerBlock"><span id="days">0</span> days <span id="hours">00</span> hours <span id="minutes">00</span> minutes <span id="seconds">00</span> seconds</div>
+    </body>
+</html>

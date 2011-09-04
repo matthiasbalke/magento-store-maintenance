@@ -23,12 +23,12 @@ class BalkeTechnologies_StoreMaintenance_Controller_Router_Standard extends Mage
         $helper = Mage::helper('BalkeTechnologies_StoreMaintenance');
         $storeCode = $request->getStoreCodeFromPath();
 
-        $enabled = $helper->getConfig('enabled', $storeCode);
+        $enabled = $helper->getConfig('enabled', 'settings', $storeCode);
 
         // module enabled?
         if (1 == $enabled) {
 
-            $allowedIPsString = $helper->getConfig('allowedIPs', $storeCode);
+            $allowedIPsString = $helper->getConfig('allowedIPs', 'settings', $storeCode);
 
             // remove spaces from string
             $allowedIPsString = preg_replace('/ /', '', $allowedIPsString);
@@ -41,7 +41,7 @@ class BalkeTechnologies_StoreMaintenance_Controller_Router_Standard extends Mage
 
             $currentIP = $_SERVER['REMOTE_ADDR'];
 
-            $allowFrontendForAdmins = $helper->getConfig('allowFrontendForAdmins', $storeCode);
+            $allowFrontendForAdmins = $helper->getConfig('allowFrontendForAdmins', 'settings', $storeCode);
 
             $adminIp = null;
             if (1 == $allowFrontendForAdmins) {
@@ -65,7 +65,7 @@ class BalkeTechnologies_StoreMaintenance_Controller_Router_Standard extends Mage
                 if (!in_array($currentIP, $allowedIPs)) {
                     $this->__log('Access denied  for IP: ' . $currentIP . ' and store ' . $storeCode, 1, $storeCode);
 
-                    $maintenancePage = trim($helper->getConfig('maintenancePage', $storeCode));
+                    $maintenancePage = trim($helper->getConfig('maintenancePage', 'settings', $storeCode));
                     // if custom maintenance page is defined in backend, display this one
                     if ('' !== $maintenancePage) {
 
@@ -77,7 +77,7 @@ class BalkeTechnologies_StoreMaintenance_Controller_Router_Standard extends Mage
                         $response->setHeader('Status', '503 Service Temporarily Unavailable');
                         $response->setHeader('Retry-After', '5000');
 
-                        $response->setBody($maintenancePage);
+                        $response->setBody($helper->replacePlaceholders($maintenancePage));
                         $response->sendHeaders();
                         $response->outputBody();
                     }
@@ -100,8 +100,8 @@ class BalkeTechnologies_StoreMaintenance_Controller_Router_Standard extends Mage
      */
     private function __log($string, $verbosityLevelRequired = 1, $storeCode = null, $zendLevel = Zend_Log::DEBUG) {
         $helper = Mage::helper('BalkeTechnologies_StoreMaintenance');
-        $logFile = trim($helper->getConfig('logFile', $storeCode));
-        $logVerbosity = trim($helper->getConfig('logVerbosity', $storeCode));
+        $logFile = trim($helper->getConfig('logFile', 'settings', $storeCode));
+        $logVerbosity = trim($helper->getConfig('logVerbosity', 'settings', $storeCode));
 
         if ('' === $logFile) {
             $logFile = 'maintenance.log';
