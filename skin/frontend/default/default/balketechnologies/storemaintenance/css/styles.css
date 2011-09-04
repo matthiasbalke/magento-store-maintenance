@@ -1,0 +1,48 @@
+
+*{
+    margin: 0px;
+    passing: 0px;
+}
+
+body{
+    background-color: #222222;
+    color: #DDDDDD;
+    font-family: sans-serif;
+    margin-top: 80px;
+}
+
+h1{
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+
+h2{
+    margin-left: 494px;
+    font-size: 1.6em;
+}
+
+.inner-block{
+    padding: 25px;
+    margin-bottom: 80px;
+    background-color: #555555;
+}
+
+.centered{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+.timer {
+    /*border: 1px solid yellow;*/
+
+    font-size: 2em;
+    font-weight: bold;
+
+    text-align: center;
+    width: 1000px;
+}
+
+#days, #hours, #minutes, #seconds{
+    font-size: 3em;
+}
