@@ -17,7 +17,7 @@
 <config>
     <modules>
         <BalkeTechnologies_StoreMaintenance>
-            <version>0.3.3</version>
+            <version>0.3.4</version>
         </BalkeTechnologies_StoreMaintenance>
     </modules>
     
@@ -108,5 +108,27 @@
             </settings>
         </storeMaintenance>
     </default>
-    
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <storeMaintenance>
+                                            <title>Store Maintenance</title>
+                                        </storeMaintenance>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
 </config>
