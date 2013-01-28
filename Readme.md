@@ -56,6 +56,7 @@ Matthias Balke
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
+    :::text
     Copyright since 2011 Matthias Balke (magento@balke-technologies.de)
 
     Licensed under the Apache License, Version 2.0 (the "License");
