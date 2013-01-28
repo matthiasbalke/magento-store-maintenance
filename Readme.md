@@ -42,7 +42,8 @@ Store Maintenance is developed to give shop developers/administrators an easy wa
     * skin/frontend/default/default/balketechnologies/storemaintenance/
 3. Execute this SQL to delete module settings from database:  
 ```
-    DELETE FROM core_config_data WHERE path = 'storeMaintenance/settings/maintenancePage';
+:::sql
+DELETE FROM core_config_data WHERE path = 'storeMaintenance/settings/maintenancePage';
 ```
 
 ## Support
@@ -62,21 +63,22 @@ Matthias Balke
 ## License
 - - -
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+```
+:::text
+Copyright since 2011 Matthias Balke (magento@balke-technologies.de)
 
-    :::text
-    Copyright since 2011 Matthias Balke (magento@balke-technologies.de)
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
 
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
 
 ## Copyright
 - - -
