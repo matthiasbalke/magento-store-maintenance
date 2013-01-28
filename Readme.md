@@ -3,25 +3,25 @@ Store Maintenance allows you to put each store view separately into maintenance 
 
 ## Facts
 
-- version: 0.3.3
-- [extension on Magento Connect](http://www.magentocommerce.com/magento-connect/store-maintenance.html)
-- Magento Connect 1.0 extension key: magento-community/BalkeTechnologies_StoreMaintenance
-- Magento Connect 2.0 extension key: http://connect20.magentocommerce.com/community/BalkeTechnologies_StoreMaintenance
-- [extension on BitBucket](https://bitbucket.org/3lt0n/magento-module-storemaintenance)
-- [direct download link](https://bitbucket.org/3lt0n/magento-module-storemaintenance/downloads/BalkeTechnologies_StoreMaintenance-0.3.3.tgz)
+ * version: 0.3.3
+ * [extension on Magento Connect](http://www.magentocommerce.com/magento-connect/store-maintenance.html)
+ * Magento Connect 1.0 extension key: magento-community/BalkeTechnologies_StoreMaintenance
+ * Magento Connect 2.0 extension key: http://connect20.magentocommerce.com/community/BalkeTechnologies_StoreMaintenance
+ * [extension on BitBucket](https://bitbucket.org/3lt0n/magento-module-storemaintenance)
+ * [direct download link](https://bitbucket.org/3lt0n/magento-module-storemaintenance/downloads/BalkeTechnologies_StoreMaintenance-0.3.3.tgz)
 
 ## Description
 Store Maintenance is developed to give shop developers/administrators an easy way to lock out customers, while they maintain their stores.
 
 
 ## Features
-- A custom html page can be defined in the backend, which is displayed to all customers, while the store is in maintenance mode.
-- After logging into the backend as an administrator, the frontend can be used with this account. This way updates and changes to the shop / design can be reviewed and tested in a safe manner.
-- IPs can be white listed from within the backend, so chosen accounts can view the store frontend while in maintenance mode, without having to have administrator access.
+ * A custom html page can be defined in the backend, which is displayed to all customers, while the store is in maintenance mode.
+ * After logging into the backend as an administrator, the frontend can be used with this account. This way updates and changes to the shop / design can be reviewed and tested in a safe manner.
+ * IPs can be white listed from within the backend, so chosen accounts can view the store frontend while in maintenance mode, without having to have administrator access.
 
 
 ## Compatibility
-- Magento >= 1.4
+ * Magento >= 1.4
 
 ## Installation Instructions
 
@@ -32,12 +32,12 @@ Store Maintenance is developed to give shop developers/administrators an easy wa
 ## Uninstallation Instructions
 
 1. Delete the file app/etc/modules/BalkeTechnologies_StoreMaintenance.xml
-2. Remove all remaining extension files
-   - app/code/community/BalkeTechnologies/StoreMainenance/*
-   - app/design/adminhtml/default/default/template/balketechnologies/storemaintenance/*
-   - app/design/adminhtml/base/default/template/balketechnologies/storemaintenance/*
-   - skin/frontend/base/default/balketechnologies/storemaintenance/*
-   - skin/frontend/default/default/balketechnologies/storemaintenance/*
+2. Remove all remaining extension files:
+   * app/code/community/BalkeTechnologies/StoreMainenance/*
+   * app/design/adminhtml/default/default/template/balketechnologies/storemaintenance/*
+   * app/design/adminhtml/base/default/template/balketechnologies/storemaintenance/*
+   * skin/frontend/base/default/balketechnologies/storemaintenance/*
+   * skin/frontend/default/default/balketechnologies/storemaintenance/*
 
 ## Support
 
