@@ -42,6 +42,7 @@ Store Maintenance is developed to give shop developers/administrators an easy wa
     * skin/frontend/default/default/balketechnologies/storemaintenance/
 3. Execute this SQL to delete module settings from database:
 
+
     :::sql
     DELETE FROM \`core_config_data\`  WHERE \`path\` = "storeMaintenance/settings/maintenancePage";
 
