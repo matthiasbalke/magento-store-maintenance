@@ -1,8 +1,7 @@
 <?php
-
 /**
  *
- *  Copyright 2011 Matthias Balke (mail@balke-technologies.de)
+ *  Copyright since 2011 Matthias Balke (magento@balke-technologies.de)
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
