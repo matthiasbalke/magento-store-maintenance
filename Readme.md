@@ -1,4 +1,5 @@
 # Store Maintenance
+- - - 
 Store Maintenance allows you to put each store view separately into maintenance mode. It can be configured from backend, so no need to hack any of your files (e.g. index.php) on your server.
 
 ## Facts
