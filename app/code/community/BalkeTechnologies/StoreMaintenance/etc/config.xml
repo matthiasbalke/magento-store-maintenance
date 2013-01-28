@@ -17,7 +17,7 @@
 <config>
     <modules>
         <BalkeTechnologies_StoreMaintenance>
-            <version>0.3.4</version>
+            <version>0.4.0</version>
         </BalkeTechnologies_StoreMaintenance>
     </modules>
     
