@@ -41,9 +41,7 @@ Store Maintenance is developed to give shop developers/administrators an easy wa
 
 ## Support
 
-If you have any issues with this extension, open an [issue on BitBucket][issues]
-
-[issues](https://bitbucket.org/3lt0n/magento-module-storemaintenance/issues)
+If you have any issues with this extension, open an [issue on BitBucket](https://bitbucket.org/3lt0n/magento-module-storemaintenance/issues)
 
 ## Contribution
 Any contributions are highly appreciated. The best way to contribute code is to open a
@@ -58,19 +56,19 @@ Matthias Balke
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-> Copyright since 2011 Matthias Balke (magento@balke-technologies.de)
->
-> Licensed under the Apache License, Version 2.0 (the "License");
-> you may not use this file except in compliance with the License.
-> You may obtain a copy of the License at
->
->     http://www.apache.org/licenses/LICENSE-2.0
->
-> Unless required by applicable law or agreed to in writing, software
-> distributed under the License is distributed on an "AS IS" BASIS,
-> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-> See the License for the specific language governing permissions and
-> limitations under the License.
+    Copyright since 2011 Matthias Balke (magento@balke-technologies.de)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 ## Copyright
 (c) since 2011 Matthias Balke (Balke-Technologies.de)
