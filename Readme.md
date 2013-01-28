@@ -43,8 +43,7 @@ Store Maintenance is developed to give shop developers/administrators an easy wa
 3. Execute this SQL to delete module settings from database:
 
 
-    :::sql
-    DELETE FROM \`core_config_data\`  WHERE \`path\` = "storeMaintenance/settings/maintenancePage";
+    DELETE FROM \`core_config_data\` WHERE \`path\` = "storeMaintenance/settings/maintenancePage";
 
 ## Support
 - - -
