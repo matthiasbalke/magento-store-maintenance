@@ -33,7 +33,6 @@ Store Maintenance is developed to give shop developers/administrators an easy wa
 
 1. Delete the file app/etc/modules/BalkeTechnologies_StoreMaintenance.xml
 2. Remove all remaining extension files:
-
    * app/code/community/BalkeTechnologies/StoreMainenance/
    * app/design/adminhtml/default/default/template/balketechnologies/storemaintenance/
    * app/design/adminhtml/base/default/template/balketechnologies/storemaintenance/
