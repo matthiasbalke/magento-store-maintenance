@@ -4,7 +4,7 @@ Store Maintenance allows you to put each store view separately into maintenance 
 
 ## Facts
 - - -
- * version: 0.3.3
+ * latest stable version: 0.3.3
  * [extension on Magento Connect](http://www.magentocommerce.com/magento-connect/store-maintenance.html)
  * Magento Connect 1.0 extension key: magento-community/BalkeTechnologies_StoreMaintenance
  * Magento Connect 2.0 extension key: http://connect20.magentocommerce.com/community/BalkeTechnologies_StoreMaintenance
