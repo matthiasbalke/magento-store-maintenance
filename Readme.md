@@ -84,9 +84,8 @@ limitations under the License.
 - - -
 Developed using a free OpenSource license of [PHP Storm 5](http://www.jetbrains.com/phpstorm/) sponsored by [JetBrains](http://www.jetbrains.com/):
 
-![PHP Storm 5](http://www.jetbrains.com/img/logos/phpstorm_logo142x29.gif "PHP Storm 5")
-
-![JetBrains](http://www.jetbrains.com/img/logos/logo_jetbrains_small.gif "JetBrains")
+[![PHP Storm 5](http://www.jetbrains.com/img/logos/phpstorm_logo142x29.gif "PHP Storm 5")](http://www.jetbrains.com/phpstorm/)
+[![JetBrains](http://www.jetbrains.com/img/logos/logo_jetbrains_small.gif "JetBrains")](http://www.jetbrains.com/)
 
 ## Copyright
 - - -
