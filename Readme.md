@@ -80,6 +80,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
+## Sponsors
+- - -
+Developed using a free OpenSource license of [PHP Storm 5](http://www.jetbrains.com/phpstorm/) sponsored by [JetBrains](http://www.jetbrains.com/):
+
+![PHP Storm 5](http://www.jetbrains.com/img/logos/phpstorm_logo142x29.gif "PHP Storm 5")
+
+![JetBrains](http://www.jetbrains.com/img/logos/logo_jetbrains_small.gif "JetBrains")
+
 ## Copyright
 - - -
 (c) since 2011 Matthias Balke (Balke-Technologies.de)
