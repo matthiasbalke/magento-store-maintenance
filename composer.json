@@ -1,0 +1,15 @@
+{
+    "name": "balke-technologies/magento-module-storemaintenance",
+    "type": "magento-module",
+    "license": "Apache-2.0",
+    "description": "Store Maintenance allows you to put each store view separately into maintenance mode. It can be configured from backend, so no need to hack any of your files (e.g. index.php) on your server",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "Matthias Balke",
+            "email": "magento@balke-technologies.de"
+        }
+    ]
+}
